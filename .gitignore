@@ -1,0 +1,2 @@
+#Ignore all scraper generated csv files
+*.csv
