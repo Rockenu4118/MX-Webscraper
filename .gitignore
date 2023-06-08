@@ -1,2 +1,5 @@
 #Ignore all scraper generated csv files
 *.csv
+
+#Ignore all pycache files
+.pyc

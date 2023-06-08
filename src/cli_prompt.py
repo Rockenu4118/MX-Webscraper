@@ -43,4 +43,4 @@ class CLIPrompt:
     @staticmethod
     def session_complete(time_elapsed):
         print("\nScraping session complete.")
-        print(f"Elapsed time: {time_elapsed}")
+        print(f"Time elapsed: {time_elapsed}")
