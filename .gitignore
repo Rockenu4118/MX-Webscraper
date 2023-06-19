@@ -2,4 +2,4 @@
 *.csv
 
 #Ignore all pycache files
-.pyc
+*.cpython-311.pyc

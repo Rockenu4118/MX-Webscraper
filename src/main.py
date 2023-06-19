@@ -1,23 +1,24 @@
-from config import Config
-from scraper import Scraper
-from cli_prompt import CLIPrompt
+from views.home_view import HomeView
+from views.session_view import SessionView
+from controllers.session_controller import SessionController
 
-def main(scraper):
-    CLIPrompt.title()
-    CLIPrompt.intro()
-    selection = CLIPrompt.base_commands()
+def main():
+    # Initialize views
+    # TODO: home_controller = HomeController()
+    session_controller = SessionController()
+    
+    # Initialize controllers
+    home_view = HomeView()
+    session_view = SessionView(session_controller)
+    
+    # Display home view and recieve menu selection
+    selection = home_view.display()
 
     if selection == 1:
-        starting_id, ending_id, workers = CLIPrompt.session_options()
-
-    scraper.configure_session(Config.base_url, int(starting_id), int(ending_id), int(workers))
-    CLIPrompt.session_beginning()
-    time_elapsed = scraper.run_session()
-
-    CLIPrompt.session_complete(time_elapsed)
+        session_view.display()
+        
 
 
 if __name__ == "__main__":
-    scraper = Scraper()
+    main()
 
-    main(scraper)
