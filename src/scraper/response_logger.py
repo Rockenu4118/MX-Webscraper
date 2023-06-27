@@ -18,6 +18,7 @@ def log_response(id, page_attributes):
         of_velo   = page_attributes.of_velo.text   if page_attributes.of_velo   != None else 0
         if_velo   = page_attributes.if_velo.text   if page_attributes.if_velo   != None else 0
         sixty     = page_attributes.sixty.text     if page_attributes.sixty     != None else 0
+        pop       = page_attributes.pop.text       if page_attributes.pop       != None else 0
         fb_velo   = page_attributes.fb_velo.text   if page_attributes.fb_velo   != None else 0
 
         player = Player(
@@ -39,6 +40,7 @@ def log_response(id, page_attributes):
             of_velo,
             if_velo,
             sixty,
+            pop,
             fb_velo
         )
 

@@ -1,12 +1,13 @@
 import csv
 
 class MetricSet:
-    def __init__(self, player_id, exit_velo, of_velo, if_velo, sixty, fb_velo):
+    def __init__(self, player_id, exit_velo, of_velo, if_velo, sixty, pop, fb_velo):
         self.player_id = player_id
         self.exit_velo = exit_velo
         self.of_velo   = of_velo
         self.if_velo   = if_velo
         self.sixty     = sixty
+        self.pop       = pop
         self.fb_velo   = fb_velo
 
     def __str__(self):
@@ -21,5 +22,6 @@ class MetricSet:
                 self.of_velo,
                 self.if_velo,
                 self.sixty,
+                self.pop,
                 self.fb_velo,
             ])

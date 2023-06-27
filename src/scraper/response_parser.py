@@ -18,6 +18,7 @@ def parse_response(id, response):
         of_velo    = page.find(id="ContentTopLevel_ContentPlaceHolder1_lblPGEventResultsOF")
         if_velo    = page.find(id="ContentTopLevel_ContentPlaceHolder1_lblPGEventResultsIF")
         sixty      = page.find(id="ContentTopLevel_ContentPlaceHolder1_lblPGEventResults60")
+        pop        = page.find(id="ContentTopLevel_ContentPlaceHolder1_lblPGEventResultsCPop")
         fb_velo    = page.find(id="ContentTopLevel_ContentPlaceHolder1_lblPGEventResultsFB")
 
         page_attributes = PageAttributes(
@@ -33,6 +34,7 @@ def parse_response(id, response):
             of_velo,
             if_velo,
             sixty,
+            pop,
             fb_velo
         )
 
